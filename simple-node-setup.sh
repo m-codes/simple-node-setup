@@ -12,3 +12,10 @@ cd "$dirName"
 
 # Create the JS file in the given directory
 touch "$dirName".js
+# Add all permissions to that file
+chmod 755 "$dirName".js
+
+# Create the test JS file in the given directory
+touch "$dirName".test.js
+# Add all permissions to that file
+chmod 755 "$dirName".test.js
