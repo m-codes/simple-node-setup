@@ -19,3 +19,18 @@ chmod 755 "$dirName".js
 touch "$dirName".test.js
 # Add all permissions to that file
 chmod 755 "$dirName".test.js
+
+# Setup our environment to use node latest version
+source ~/.nvm/nvm.sh
+nvm use node
+
+# Initialise the NPM project (this will create a file package.json)
+npm init -y
+
+# Add the jest package to our project
+# (this will update package.json and package-lock.json)
+npm add jest
+
+# Also install jest "globally"
+# (this is so we can run the `jest` command)
+npm install -g jest
