@@ -34,3 +34,17 @@ npm add jest
 # Also install jest "globally"
 # (this is so we can run the `jest` command)
 npm install -g jest
+
+# This will add an empty test that you can use as a template
+printf "
+const %s = require('./%s.js');
+
+describe('Hello World', () => {
+  it('returns true', () => {
+    expect(true).toBe(true);
+  });
+});
+" $dirName $dirName > $dirName.test.js
+
+# Run our tests
+jest
